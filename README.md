@@ -19,8 +19,8 @@ Pour conteneuriser l'application backend on ajoute un fichier Dockerfile dans /B
 Pour conteneuriser l'application React en front end on ajoute un fichier Dockerfile dans /frontEnd il contient :
 -fichier dockerfile:
 <code>
-        RUN mkdir / frontEnd
-        WORKDIR / frontEnd
+        RUN mkdir / frontEnd <br/>
+        WORKDIR / frontEnd <br/>
         COPY / src / app / src
         COPIE ["package.json", "package-lock.json*", "./"]
         RUN npm install --production --silent && mv node_modules ../
