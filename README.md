@@ -9,11 +9,13 @@ Pour conteneuriser l'application on aura besoin de quelques fichier Dockerfile e
  Backend
 Pour conteneuriser l'application backend on ajoute un fichier Dockerfile dans /BackEnd/demo il contient :
 -fichier dockerfile:
+
         from maven:3.8.2-jdk-8
         workdir /app
         copy . .
         run mvn clean install
         cmd mvn spring-boot:run
+        
         
  FrontEnd
 Pour conteneuriser l'application React en front end on ajoute un fichier Dockerfile dans /frontEnd il contient :
