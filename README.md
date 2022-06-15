@@ -6,7 +6,8 @@ Technologies:
     HTML,CSS
 ## Documentation
 Pour conteneuriser l'application on aura besoin de quelques fichier Dockerfile et un fichier DockerCompose
- Backend
+----Backend
+
 Pour conteneuriser l'application backend on ajoute un fichier Dockerfile dans /BackEnd/demo il contient :
 -fichier dockerfile:
 
@@ -17,7 +18,8 @@ Pour conteneuriser l'application backend on ajoute un fichier Dockerfile dans /B
         cmd mvn spring-boot:run
         
         
- FrontEnd
+ ----FrontEnd
+ 
 Pour conteneuriser l'application React en front end on ajoute un fichier Dockerfile dans /frontEnd il contient :
 -fichier dockerfile:
 
@@ -30,8 +32,10 @@ Pour conteneuriser l'application React en front end on ajoute un fichier Dockerf
         expose 3000 
    
   
- base de donnees
+----base de donnees<br/>
+
     Premierement on doit faire un pull de l'image de mysql de docker registry puis on crée un fichier DockerCompose qui contient le code en dessous et on excute la commande "dockercompose up".
+    
 -fichier dockerCompose:
 
         version: '3.1'
