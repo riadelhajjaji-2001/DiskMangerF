@@ -18,6 +18,7 @@ Pour conteneuriser l'application backend on ajoute un fichier Dockerfile dans /B
  FrontEnd
 Pour conteneuriser l'application React en front end on ajoute un fichier Dockerfile dans /frontEnd il contient :
 -fichier dockerfile:
+<code>
         RUN mkdir / frontEnd
         WORKDIR / frontEnd
         COPY / src / app / src
@@ -25,7 +26,7 @@ Pour conteneuriser l'application React en front end on ajoute un fichier Dockerf
         RUN npm install --production --silent && mv node_modules ../
         # Exposer PORT 3000 sur notre machine virtuelle afin que nous puissions exécuter notre serveur
         EXPOSE 3000 
-    
+  </code>
  base de donnees
     Premierement on doit faire un pull de l'image de mysql de docker registry puis on crée un fichier DockerCompose qui contient le code en dessous et on excute la commande "dockercompose up".
 -fichier dockerCompose:
